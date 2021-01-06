@@ -25,6 +25,19 @@ function logout() {
 }
 
 
+function redirectToRoomName(name)
+{
+      localStorage.setItem("room_name",name);
+      window.location="Lets_page.html";
+
+}
+function logout() {
+      localStorage.removeItem("user_name");
+      localStorage.removeItem("room_name");
+      window.location="index.html";
+}
+
+
 function addRoom() {
 
    room_name= document.getElementById("room_name_input").value;
@@ -34,5 +47,5 @@ function addRoom() {
 
    localStorage.setItem("room_name",room_name);
 
-   window.location= "LetsChat_page.html"
+   window.location= "Lets_page.html"
 }
